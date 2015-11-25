@@ -1,3 +1,10 @@
+/*************************************************************************
+ **	    >  Name : FDG_combine.cpp
+ **	    > Author: LiYingXiao (Sweethreart502) 
+ **	    >  Mail : liyingxiao502@gmail.com
+ **	    >  Blog : http://blog.csdn.net/u013166575
+ **	    > Created Time: 2015年11月22日 星期日 14时15分03秒
+ ************************************************************************/
 #include <iostream>
 
 #define Max 5

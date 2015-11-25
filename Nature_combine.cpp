@@ -1,3 +1,11 @@
+/*************************************************************************
+ **	    >  Name : Nature_combine.cpp
+ **	    > Author: LiYingXiao (Sweethreart502) 
+ **	    >  Mail : liyingxiao502@gmail.com
+ **	    >  Blog : http://blog.csdn.net/u013166575
+ **	    > Created Time: 2015年11月24日 星期二 21时32分40秒
+ ************************************************************************/
+
 #include <iostream>
 #define N 10
 
