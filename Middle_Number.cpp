@@ -1,5 +1,5 @@
 /*************************************************************************
- **     >  Name : 0_1.cpp
+ **     >  Name : Middle_number.cpp
  **     > Author: LiYingXiao (Sweethreart502) 
  **     >  Mail : liyingxiao502@gmail.com
  **     >  Blog : http://blog.csdn.net/u013166575
@@ -9,10 +9,10 @@
 
 #define N 4
 
-using namespace std;
+using namespace std ;
 
-int min(int a, int b){
-    return a>b?b:a;
+int min( int a , int b ) {
+    return a > b ? b : a ;
 }
 
 int judge ( int n ) {
