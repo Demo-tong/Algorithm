@@ -40,6 +40,9 @@ void order2 (int a[] ) ;
 // 冒泡排序的改进
 void order2_0 ( int a[] ) ;
 
+// 快速排序
+void order5 ( int a[] ) ;
+void QSort ( int a[] , int low , int high ) ;
 // 输出结果
 void print ( int a[] ) ;
 
@@ -49,7 +52,7 @@ int main ( int argc , char * argv[] )
     int a[] = { 4 , 2 , 7 , 1 , 9 } ;
 
     // 选择排序
-    order2_0 ( a ) ;
+    order5 ( a ) ;
 
     // 输出结果
     print ( a ) ;
@@ -132,6 +135,50 @@ void order2_0 ( int a[] )
             }
         }
     }
+}
+
+// 快速排序
+void order5 ( int a[] )
+{
+    QSort ( a , 0 , N - 1 ) ;
+}
+
+void QSort ( int a[] , int low , int high )
+{
+    // 首先检查参数合法性
+    if ( low >= high ) {
+        // 这个条件一定要写对，否则运行没有效果，一段时间里总是会忽略这个条件的检查。＃我就在这里错了一次＃
+        return ;
+    }
+
+    int first = low ;
+    int last = high ;
+    int key = a[low] ;  // 将第一个元素作为key
+
+    while ( first < last ) {
+        // 在后面找比key小的数
+        while ( first < last && a[last] >= key ) {
+            // last值大，则继续
+            last-- ;
+        } 
+        // 否则它小于key，则将a[first]修改为当前的a[last]
+        a[first] = a[last] ;
+
+        // 从前面找比key大的数
+        while ( first < last && a[first] <= key ) {
+            // first值小，则继续
+            first++ ;
+        }
+        // 否则它大于key，则将a[last]修改为当前的a[first]
+        a[last] = a[first] ;
+    }
+
+    // 循环结束，则将key放入a[first]或者a[last],当前的last=first
+    a[first] = key ;
+
+    // 以key位置为分界线，继续递归
+    QSort ( a , low , first - 1 ) ;
+    QSort ( a , first + 1 , high ) ;
 }
 
 /* 输出函数 */
