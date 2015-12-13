@@ -4,6 +4,7 @@
  **	    >  Mail : liyingxiao502@gmail.com
  **	    >  Blog : http://blog.csdn.net/u013166575
  **	    > Created Time: 2015年11月22日 星期日 14时15分03秒
+ **     > Description : 非递归实现归并排序。
  ************************************************************************/
 #include <iostream>
 

@@ -4,6 +4,7 @@
  **     >  Mail : liyingxiao502@gmail.com
  **     >  Blog : http://blog.csdn.net/u013166575
  **     > Created Time: 2015年11月21日 星期六 23时41分19秒
+ **     > Description : 0_1背包问题，在容量的约束下，使得装载的物品价值最大。
  ************************************************************************/
 
 #include <iostream>
@@ -33,9 +34,21 @@ int main ( int argc , char * argv[] )
 
     process ( m ) ;
 
+    for ( int i = 1 ; i < 6 ; i++ ) {
+
+        for ( int j = 0 ; j < 11 ; j++ ) {
+            if ( m[i][j] / 10 ) 
+                std::cout << m[i][j] << "  " ;
+            else 
+                std::cout << " " << m[i][j] << "  " ;
+        }
+        std::cout << std::endl ;
+    }
+
     option ( m ) ;
 
     // 输出情况
+    std::cout << "输出装入情况:0表示不装,1表示装" << std::endl ;
     for ( i = 1 ; i <= 5 ; i++ ) {
         if ( x[i] ) {
             std::cout << "1  " ;
